@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <title>number changer</title>
+    <style media="screen">
+    body{background-color:powderblue;}
+    h1{font-family: 'Dancing Script', cursive;
+  text-align: center; font-size: 100px;}
+    .a{text-align: center;}
+    input{background-color:#00ffcc;color:#215286 ;border:solid 5px skyblue; width:200px; height: 50px;}
+
+    </style>
+
+    </head>
+    <body>
+    <h1>number changer</h1>
+    <div class="a">
+
+    <input type="text" id="a" value="">
+    <input type="button"  value="2진수">
+    <input type="button"  value="8진수">
+    <input type="button"  value="16진수">
+    </div>
+    <script type="text/javascript">
+    var a=document.getElementById("a");
+    function changeBin() {
+    a.value = parseInt(a.value).toString(2);
+    }
+    function changeOct() {
+    a.value = parseInt(a.value).toString(8);
+    }
+    function changeHex() {
+    a.value = parseInt(a.value).toString(16);
+    }
+    document.querySelector('input[value="2진수"]').addEventListener('click', changeBin);
+    document.querySelector('input[value="8진수"]').addEventListener('click', changeOct);
+    document.querySelector('input[value="16진수"]').addEventListener('click', changeHex);
+    </script>
+    </body>
+    </html>
